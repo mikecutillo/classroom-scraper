@@ -43,6 +43,12 @@ Google Classroom works fine for a teacher managing one class. It's painful for a
 ![Notion API](https://img.shields.io/badge/Notion_API-000000?style=flat&logo=notion&logoColor=white)
 ![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat&logo=discord&logoColor=white)
 
+## Related in the AIOS Portfolio
+
+- **[PowerSchool Scraper](https://github.com/mikecutillo/powerschool-scraper)** — Sibling tool; Playwright PowerSchool gradebook extractor with rules-engine alerts
+- **[BMO Discord Agent](https://github.com/mikecutillo/bmo-discord-agent)** — Discord-native family AI companion; the alerts channel for missing or late assignments
+- **[AIOS](https://github.com/mikecutillo/aios)** — The host; Next.js dashboard orchestrating 16+ household and business modules
+
 ---
 
 Part of the AIOS portfolio. See the [profile README](https://github.com/mikecutillo) for the full system map.
