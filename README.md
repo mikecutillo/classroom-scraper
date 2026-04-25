@@ -18,6 +18,25 @@ Google Classroom works fine for a teacher managing one class. It's painful for a
 - **Detects "the stuff that matters"** — missing assignments, upcoming due dates, new grades posted, overdue work
 - **Alerts to Discord** and **syncs the full dataset to Notion** for mobile access
 
+## Architecture
+
+```mermaid
+graph LR
+    S1[👤 Student 1] --> Auth
+    S2[👤 Student 2] --> Auth
+    S3[👤 Student 3] --> Auth
+
+    Auth[🔐 Multi-account OAuth] --> Pull[📥 Classroom API]
+    Pull --> Fallback{API gap?}
+    Fallback -->|yes| PW[🤖 Playwright fallback]
+    Fallback -->|no| Store
+    PW --> Store[(SQLite)]
+
+    Store --> Detect[🚨 Missing · Due soon · New grades]
+    Detect --> Discord[💬 Discord alert]
+    Store --> Notion[📝 Notion sync]
+```
+
 ## Software
 
 | Layer | Tech |
